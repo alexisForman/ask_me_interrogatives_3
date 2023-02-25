@@ -1,0 +1,18 @@
+<div>
+<h1>Already a member?</h1>
+    <%= form_with do |form| %> 
+        <div>
+            <%= form.label :username%>
+            <%= form.text_field :username%>
+        </div>
+
+        <div>
+            <%= form.label :password%>
+            <%= form.password_field :password%>
+        </div>
+
+        <div>
+            <%= form.submit "Log-in!" %>
+        </div>
+    <% end %>
+</div>
