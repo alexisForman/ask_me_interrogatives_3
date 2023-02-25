@@ -1,8 +1,10 @@
 <ul>
-    <li><%= link_to "Welcome", static_pages_welcome_path %></li>
-    <li><%= link_to "Rules", static_pages_rules_path %></li>
-    <li><%= link_to "Disclaimer", static_pages_disclaimer_path %></li>
-    <li><%= link_to "Participate", new_user_path %></li>
-
-    <li>You are logged in as:   <%= link_to "Log-out" %></li>
+    <%# <%= if logged_in? %> 
+        <li>You are logged in as:   <%= link_to "Log-out", logout_path, data: {"turbo-method": :delete} %></li>
+    <%# <%= else %> 
+        <li><%= link_to "Welcome", static_pages_welcome_path %></li>
+        <li><%= link_to "Rules", static_pages_rules_path %></li>
+        <li><%= link_to "Disclaimer", static_pages_disclaimer_path %></li>
+        <li>Participate: <%= link_to "login", login_path %> <%= link_to "signup", signup_path %> </li>
+    <%# <% end %> 
 </ul>
